@@ -1,0 +1,7 @@
+package com.mavenir.school.model;
+
+public class SchoolMember {
+	
+	String name;
+	Student[] students;
+}

@@ -1,0 +1,21 @@
+package com.mavenir.school.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.mavenir.school.model.SchoolMember;
+
+import java.util.List;
+
+
+@RestController
+@RequestMapping("/school")
+public class SchoolController {
+
+	@GetMapping("/{teacher}")
+	public List<SchoolMember> getSchoolMembers(@PathVariable String teacher){
+	return new SchoolMember();	
+	}
+}

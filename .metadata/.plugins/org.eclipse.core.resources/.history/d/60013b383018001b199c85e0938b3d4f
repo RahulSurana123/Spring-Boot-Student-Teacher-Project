@@ -1,0 +1,5 @@
+package com.mavenir.school.model;
+
+public class School {
+
+}

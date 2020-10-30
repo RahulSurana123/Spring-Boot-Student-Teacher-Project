@@ -1,0 +1,8 @@
+package com.mavenir.school.Repo;
+
+import org.springframework.data.couchbase.repository.CouchbaseRepository;
+
+
+public interface SchoolRepo  extends CouchbaseRepository<School, Integer>{
+
+}

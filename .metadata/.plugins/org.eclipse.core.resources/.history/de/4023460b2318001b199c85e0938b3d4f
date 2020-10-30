@@ -1,0 +1,5 @@
+package com.mavenir.school.Repo;
+
+public interface SchoolRepo {
+
+}

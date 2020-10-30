@@ -1,0 +1,51 @@
+package com.mavenir.teacher.model;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.couchbase.core.mapping.Document;
+
+import lombok.Data;
+
+@Data
+@Document
+public class Teacher {
+	@Id
+	Integer id;
+	String name;
+	int[] students;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int[] getStudents() {
+		return students;
+	}
+
+	public void setStudents(int[] students) {
+		this.students = students;
+	}
+
+	public Teacher(Integer id, String name, int[] students) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.students = students;
+	}
+
+	public Teacher() {
+		super();
+	}
+
+}

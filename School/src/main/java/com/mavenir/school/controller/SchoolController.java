@@ -1,0 +1,38 @@
+package com.mavenir.school.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.reactive.function.client.WebClient;
+
+import com.mavenir.school.model.SchoolMember;
+import com.mavenir.school.model.Student;
+import com.mavenir.school.model.Teacher;
+
+import java.util.List;
+
+
+@RestController
+@RequestMapping("/school")
+public class SchoolController {
+
+	@Autowired
+	WebClient.Builder b;
+	
+	@GetMapping("/{teacher}")
+	public SchoolMember getSchoolMembers(@PathVariable String teacher){
+	
+		Teacher t = b.build().get().uri("http://localhost:8088/home/teacher/"+teacher).retrieve().bodyToMono(Teacher.class).block();
+		
+		Student[] s = new Student[t.students.length];
+		for(int i =0 ; i < t.students.length;i++) {
+			s[i] = b.build().get().uri("http://localhost:8082/home/student/"+t.students[i]).retrieve().bodyToMono(Student.class).block();
+		}
+		
+		
+		
+		return new SchoolMember(t.name,s);	
+	}
+}

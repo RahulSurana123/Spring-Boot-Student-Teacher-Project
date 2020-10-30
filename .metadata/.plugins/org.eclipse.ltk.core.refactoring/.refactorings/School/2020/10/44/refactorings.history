@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.mavenir.school.config.TeacherCongfig&apos; to &apos;SchoolCongfig&apos;&#x0A;- Original project: &apos;School&apos;&#x0A;- Original element: &apos;com.mavenir.school.config.TeacherCongfig&apos;&#x0A;- Renamed element: &apos;com.mavenir.school.config.SchoolCongfig&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;TeacherCongfig&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.mavenir.school.config{TeacherCongfig.java[TeacherCongfig" matchStrategy="1" name="SchoolCongfig" qualified="false" references="true" similarDeclarations="false" stamp="1603782381221" textual="false" version="1.0"/>
+</session>

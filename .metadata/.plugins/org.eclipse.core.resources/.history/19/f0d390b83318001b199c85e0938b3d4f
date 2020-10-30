@@ -1,0 +1,11 @@
+package com.mavenir.school.model;
+
+import org.springframework.data.couchbase.core.mapping.Document;
+
+
+@Document
+public class SchoolMember {
+	
+	String name;
+	Student[] students;
+}

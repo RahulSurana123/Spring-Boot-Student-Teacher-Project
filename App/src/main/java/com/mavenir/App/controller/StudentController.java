@@ -1,0 +1,53 @@
+package com.mavenir.App.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.mavenir.App.model.Student;
+import com.mavenir.App.repository.StudentRepo;
+
+import java.util.*;
+
+@RestController	
+@RequestMapping("/home")
+public class StudentController {
+
+	@Autowired
+	private StudentRepo sr;
+	
+	@PostMapping
+	@ResponseStatus(HttpStatus.CREATED)
+	public String saveStudent(@RequestBody Student st) {
+			sr.save(st);
+			System.out.println("Saved a student");
+		return "Saved Successfully";
+	}
+	
+	@GetMapping	
+	@ResponseStatus(HttpStatus.OK)
+	public List<Student> getStudents(){
+		return sr.findAll();
+	}
+	
+	@RequestMapping("/student/{rollno}")
+	@ResponseStatus(HttpStatus.OK)
+	public Student getStudents(@PathVariable int rollno){
+		return sr.findById(rollno).orElse(new Student());
+	}
+	
+	@DeleteMapping	
+	@ResponseStatus(HttpStatus.OK)
+	public String deleteStudents(@RequestBody int rollno){
+		 sr.deleteById(rollno);
+		 System.out.println("Deleted a student");
+		 return "Deleted Successfully";
+	}
+}

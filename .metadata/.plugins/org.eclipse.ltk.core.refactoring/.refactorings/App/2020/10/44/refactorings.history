@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Student.java&apos; to &apos;School/src/main/java/com.mavenir.school.model&apos;&#x0A;- Original project: &apos;App&apos;&#x0A;- Destination element: &apos;School/src/main/java/com.mavenir.school.model&apos;&#x0A;- Original element: &apos;com.mavenir.App.model.Student.java&apos;" description="Copy compilation unit" destination="=School/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.mavenir.school.model" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.mavenir.App.model{Student.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1603788094927" units="1" version="1.0"/>
+</session>
