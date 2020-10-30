@@ -24,11 +24,11 @@ public class SchoolController {
 	@GetMapping("/{teacher}")
 	public SchoolMember getSchoolMembers(@PathVariable String teacher){
 	
-		Teacher t = b.build().get().uri("http://localhost:8088/home/teacher/"+teacher).retrieve().bodyToMono(Teacher.class).block();
+		Teacher t = b.build().get().uri("http://teacher/home/teacher/"+teacher).retrieve().bodyToMono(Teacher.class).block();
 		
 		Student[] s = new Student[t.students.length];
 		for(int i =0 ; i < t.students.length;i++) {
-			s[i] = b.build().get().uri("http://localhost:8082/home/student/"+t.students[i]).retrieve().bodyToMono(Student.class).block();
+			s[i] = b.build().get().uri("http://Student/home/student/"+t.students[i]).retrieve().bodyToMono(Student.class).block();
 		}
 		
 		

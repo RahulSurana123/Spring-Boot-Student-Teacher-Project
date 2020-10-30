@@ -1,4 +1,4 @@
-package com.mavenir;
+package com.mavenir.teacher;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
