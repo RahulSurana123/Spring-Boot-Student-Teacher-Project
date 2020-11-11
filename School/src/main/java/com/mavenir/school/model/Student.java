@@ -18,6 +18,16 @@ public class Student {
 		super();
 	}
 
+	public Student(Student t) {
+		super();
+		this.rollno = t.rollno;
+		this.name = t.name;
+		this.marks = t.marks;
+		this.teacher = t.teacher;
+	}
+
+	
+	
 	public Student(Integer rollno, String name, Integer[] marks, String teacher) {
 		super();
 		this.rollno = rollno;

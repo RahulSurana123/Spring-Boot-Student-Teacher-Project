@@ -18,7 +18,7 @@
 		<item value="org.eclipse.jgit:5.9.0.202009080501-r"/>
 		<item value="org.eclipse.jst.common.fproj.enablement.jdt:3.13.1.v202007161535"/>
 		<item value="org.eclipse.jst.enterprise_ui.feature:3.19.0.v202007100056"/>
-		<item value="org.eclipse.justj.openjdk.hotspot.jre.full:14.0.2.v20200815-0932"/>
+		<item value="org.eclipse.justj.openjdk.hotspot.jre.full:15.0.0.v20201014-1246"/>
 		<item value="org.eclipse.m2e.feature:1.16.2.20200910-0936"/>
 		<item value="org.eclipse.m2e.logback.feature:1.16.0.20200318-1040"/>
 		<item value="org.eclipse.m2e.wtp.feature:1.4.4.20200220-1005"/>
@@ -43,4 +43,18 @@
 		<item value="org.sonatype.m2e.egit.feature:0.15.1.201806191431"/>
 		<item value="org.sonatype.m2e.mavenarchiver.feature:0.17.5.202002191804"/>
 	</list>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="67"/>
+		<item key="DIALOG_Y_ORIGIN" value="58"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
 </section>

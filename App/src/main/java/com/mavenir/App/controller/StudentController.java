@@ -40,6 +40,7 @@ public class StudentController {
 	@RequestMapping("/student/{rollno}")
 	@ResponseStatus(HttpStatus.OK)
 	public Student getStudents(@PathVariable int rollno){
+		System.out.print("Yo");
 		return sr.findById(rollno).orElse(new Student());
 	}
 	

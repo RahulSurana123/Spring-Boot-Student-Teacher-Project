@@ -24,15 +24,13 @@ public class TeacherController {
 	private TeacherRepo tr;
 
 	@PostMapping
-	@ResponseStatus(HttpStatus.CREATED)
 	public String saveTeacher(@RequestBody Teacher st) {
-		tr.save(st);
 		System.out.println("Saved a teacher");
+		tr.save(st);
 		return "Saved Successfully";
 	}
 
 	@RequestMapping("/teacher/{t}")
-	@ResponseStatus(HttpStatus.OK)
 	public Teacher getTeacher(@PathVariable String t){
 		return tr.findById(t).orElse(new Teacher());
 	}

@@ -7,5 +7,5 @@ import com.mavenir.teacher.model.Teacher;
 
 @Repository
 public interface TeacherRepo extends CouchbaseRepository<Teacher, String> {
-
+	
 }

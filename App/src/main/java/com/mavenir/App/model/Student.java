@@ -3,43 +3,60 @@ package com.mavenir.App.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.couchbase.core.mapping.Document;
 
-import lombok.Getter;
-import lombok.Setter;
-
 @Document
-@Getter
-@Setter
 public class Student {
 
 	@Id
-	private Integer rollno;
-	private String name;
-	private Integer[] marks;
-	private String teacher;
+	Integer rollno;
 	
+	String name;
 	
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((rollno == null) ? 0 : rollno.hashCode());
-		return result;
+	Integer[] marks;
+	
+	String teacher;
+	
+	public Integer getRollno() {
+		return rollno;
 	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Student other = (Student) obj;
-		if (rollno == null) {
-			if (other.rollno != null)
-				return false;
-		} else if (!rollno.equals(other.rollno))
-			return false;
-		return true;
+
+	public void setRollno(Integer rollno) {
+		this.rollno = rollno;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Integer[] getMarks() {
+		return marks;
+	}
+
+	public void setMarks(Integer[] marks) {
+		this.marks = marks;
+	}
+
+	public String getTeacher() {
+		return teacher;
+	}
+
+	public void setTeacher(String teacher) {
+		this.teacher = teacher;
+	}
+
+	public Student() {
+		super();
+	}
+	
+	public Student(Integer rollno, String name, Integer[] marks, String teacher) {
+		super();
+		this.rollno = rollno;
+		this.name = name;
+		this.marks = marks;
+		this.teacher = teacher;
 	}
 	
 }
